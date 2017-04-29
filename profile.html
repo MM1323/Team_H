@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Readster</title>
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDWIV4BAO9TCejLMbIo4jReaHLid-N1msI",
+            authDomain: "readster-8bcb7.firebaseapp.com",
+            databaseURL: "https://readster-8bcb7.firebaseio.com",
+            projectId: "readster-8bcb7",
+            storageBucket: "readster-8bcb7.appspot.com",
+            messagingSenderId: "187243061213"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <!-- Font Awsome CDN -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- w3School CDN -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- our files -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script type="text/javascript" src="action.js"></script>
+        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="firebase-logic.js"></script>
+    </head>
+    <body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home.html">Readster</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="home.html" onclick="addFriend(event)" data-username="AA">Home</a></li>
+        <li class="active"><a href="profile.html">Profile</a></li>
+        <li><a href="topics.html">Book Search</a></li>
+        <li><a href="search.html">User Search</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+      <div class="container">
+          <div class="row">
+                <div class="col-sm-12">
+                 <center><h1>Welcome back</h1></center>
+                 </div>    
+          </div>
+          
+           <div class="row">
+            <div class="col-small-12">
+              <center><button id="quest" class="btn2"><a href="topics.html"> Find a new book </a></button></center>
+            </div>
+          </div>
+          
+          
+          <div class="row">
+              <div class="col-sm-6">
+                <center>
+                <h2>
+                Reading List    
+                </h2> 
+                </center>
+                <hr></hr>
+                
+                <ol class="list-group" id="books-list">
+                    <li class="list-group-item book template"> 
+                      <img src="http://placehold.it/100/100" class="book-image"/> 
+                      <div style="display:inline-block;">
+                        <div class="title">The hunger games</div>
+                        <div class="author">Author</div>
+                      </div>
+                    </li> 
+                </ol>
+              </div>
+              <div class="col-sm-6">
+                 <center>
+                 <h2>
+                Friend List
+                 </h2>
+                 </center>
+                 <hr></hr>
+                  <ol class="list-group" id='friends-list'>
+                    <li class="list-group-item friend template">
+                      <span id="icon" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                      <a class="name" href="profile.html?username={{username}}">{{name}}</a>
+                    </li>
+                </ol>
+              </div>
+          </div>
+      </div>
+    
+    <script type="text/javascript" src="profile.js"></script>
+    </body>
+    </html>

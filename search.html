@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDWIV4BAO9TCejLMbIo4jReaHLid-N1msI",
+            authDomain: "readster-8bcb7.firebaseapp.com",
+            databaseURL: "https://readster-8bcb7.firebaseio.com",
+            projectId: "readster-8bcb7",
+            storageBucket: "readster-8bcb7.appspot.com",
+            messagingSenderId: "187243061213"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="firebase-logic.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <!-- Font Awsome CDN -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- w3School CDN -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- our files -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script type="text/javascript" src="action.js"></script>
+        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="firebase-logic.js"></script>
+        <script>
+            logIn();
+        </script>
+    </head>
+    <body>
+<nav class="navbar navbar-inverse navbar-fixed-top ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home.html">Readster</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="home.html" onclick="addFriend(event)" data-username="AA">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="topics.html">Book Search</a></li>
+        <li class="active"><a href="search.html">User Search</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="searchh">
+  <h1 class="hach">Search For Friends</h1>
+        <input type="text" id="searchInput" placeholder="Enter username or name of the user"/>
+        <button onclick="search()" id="searchButton">Search</button>
+        
+        <h4 id="resultsHeader">Results</h4>
+        <div id="users">
+        </div>
+        
+        
+        <div class="template">
+            <a href="profilePage.html?username=ueu">{{username}} - {{name}}</a> 
+            <button data-username="{{username}}" onclick="addFriend(event)">Add</button>
+        </div>
+        
+        
+        <script type="text/javascript" src="search.js"></script>
+        </div>
+    </body>
+</html>

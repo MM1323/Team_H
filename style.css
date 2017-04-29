@@ -1,0 +1,114 @@
+body{
+    background-color: #FFF2C2;
+    padding: 50px;
+}
+
+.hone {
+    padding-top:15px;
+    padding-bottom:20px;
+    text-align: auto;
+}
+
+.btn {
+    height: 100px;
+    width: 200px;
+    border-radius:25px;
+    margin: 50px;
+    font-size:25px;
+    background-color:gray;
+}
+
+.btn2 {
+ 
+    border-radius:20px;
+    margin: 50px;
+    font-size:18px;
+    background-color:gray;
+    padding:5px;
+}
+
+.template{
+    display: none;
+}
+
+hr{
+    border-top: solid 5px black;
+}
+
+h1{
+    font-size: 50px;
+    padding-top: 20px;
+    text-decoration: underline;
+    
+}
+
+#quest{
+    height:50px;
+    background: #3498db;
+    color: white;
+    padding: 10px;
+}
+
+#results {
+    padding-top:60px;
+}
+.book-image{
+    max-height:100px;
+    max-width:100px;
+}
+
+.searchh {
+    padding-top:40px;
+    text-align:center;
+}
+
+.hach {
+    padding-bottom:50px;
+}
+
+/* Search Results Appended Style */
+
+
+
+.add_list_color{
+    margin: 10px;
+}
+
+.title{
+    background: white;
+   }
+
+.description{
+    margin: 0px;
+    background: white;
+}
+
+.author{
+    margin: 0px;
+    background: white;
+}
+
+.title_style{
+    margin: 0px;
+}
+
+
+#searchInput{
+    height: 60px;
+    width: 350px;
+}
+#searchButton{
+    width: 100px;
+    height: 60px;
+}
+
+#resultsHeader{
+    font-size: 30px;
+
+}
+
+
+#users{
+    font-size: 23px;
+    margin-top: 50px;
+}
